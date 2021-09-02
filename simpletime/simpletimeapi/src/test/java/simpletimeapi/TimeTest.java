@@ -63,7 +63,7 @@ public class TimeTest {
     })
     void comparableTime(int a, int b, char expectedResult) {
         Time ta = new TTime(a);
-        Time tb = new TTime(b);
+        Time tb = new TTime(b); 
         switch (expectedResult) {
             case '=':
                 assertThat(ta).isEqualByComparingTo(tb);
