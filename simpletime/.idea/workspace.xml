@@ -49,7 +49,7 @@
       <recent name="simpletimeimpl" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in simpletimeimpl">
+  <component name="RunManager" selected="JUnit.SimpleTimeImplTest.addTimeMins">
     <configuration name="All in simpletimeimpl (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simpletimeimpl" />
       <option name="PACKAGE_NAME" value="" />
@@ -60,14 +60,6 @@
     </configuration>
     <configuration name="All in simpletimeimpl" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simpletimeimpl" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in simpletimeparent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="simpletimeparent" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
@@ -85,6 +77,22 @@
       <option name="PACKAGE_NAME" value="simpletimeimpl" />
       <option name="MAIN_CLASS_NAME" value="simpletimeimpl.SimpleDurationImplTest" />
       <option name="METHOD_NAME" value="compareToLessTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleTimeImplTest.addTimeMins" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simpletimeimpl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="simpletimeimpl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="simpletimeimpl" />
+      <option name="MAIN_CLASS_NAME" value="simpletimeimpl.SimpleTimeImplTest" />
+      <option name="METHOD_NAME" value="addTimeMins" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -108,11 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SimpleTimeImplTest.addTimeMins" />
         <item itemvalue="JUnit.All in simpletimeimpl" />
         <item itemvalue="JUnit.SimpleDurationImplTest.compareToLessTest" />
         <item itemvalue="JUnit.All in simpletimeimpl (1)" />
         <item itemvalue="JUnit.SimpleTimeImplTest.compareToLessTest" />
-        <item itemvalue="JUnit.All in simpletimeparent" />
       </list>
     </recent_temporary>
   </component>

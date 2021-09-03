@@ -27,16 +27,18 @@ public class SimpleTimeImplTest {
         var expected = new SimpleTimeImpl(2, 2);
         assertThat(actual).usingRecursiveComparison().isEqualTo(expected);
     }
+
     /**
      * test if time is added properly
      */
     @Test
     void addTimeMins() {
-        var toBeAdded = new SimpleTimeImpl(1, 1);
-        var actual = this.time.addTime(toBeAdded);
+        int addMins = 5;
+        var actual = this.time.addTime(addMins);
         var expected = new SimpleTimeImpl(2, 2);
         assertThat(actual).usingRecursiveComparison().isEqualTo(expected);
     }
+
     @Test
     void compareToLessTest() {
         var first = new SimpleTimeImpl(111, 1);
