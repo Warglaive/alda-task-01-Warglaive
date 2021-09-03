@@ -6,6 +6,7 @@ package simpletime;
 import simpletimeapi.AbstractAPFactory;
 import simpletimeapi.Duration;
 import simpletimeapi.Time;
+import simpletimeimpl.SimpleTimeImpl;
 //TODO adapt imports if required
 
 
@@ -35,7 +36,7 @@ public class APFactory implements AbstractAPFactory {
     @Override
     public Time createTime(int hours, int minutes) {
         //TODO
-        return null;
+        return new SimpleTimeImpl(hours,minutes);
     }
 
     /**

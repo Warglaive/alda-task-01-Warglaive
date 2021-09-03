@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11243aa0-4347-4a9f-9957-921a64185c73" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/simpletimeimpl/src/main/java/simpletimeimpl/SimpleDurationImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simpletimeimpl/src/test/java/simpletimeimpl/SimpleDurationImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simpletimeapi/src/test/java/simpletimeapi/TimeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/simpletimeapi/src/test/java/simpletimeapi/TimeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpletimeimpl/src/main/java/simpletime/APFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/simpletimeimpl/src/main/java/simpletime/APFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simpletimeimpl/src/main/java/simpletimeimpl/SimpleTimeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/simpletimeimpl/src/main/java/simpletimeimpl/SimpleTimeImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simpletimeimpl/src/test/java/simpletimeimpl/SimpleTimeImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/simpletimeimpl/src/test/java/simpletimeimpl/SimpleTimeImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +47,23 @@
       <recent name="simpletimeimpl" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SimpleTimeImplTest.addTime">
+  <component name="RunManager" selected="JUnit.SimpleDurationImplTest.plus">
+    <configuration name="SimpleDurationImplTest.plus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simpletimeimpl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="simpletimeimpl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="simpletimeimpl" />
+      <option name="MAIN_CLASS_NAME" value="simpletimeimpl.SimpleDurationImplTest" />
+      <option name="METHOD_NAME" value="plus" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SimpleTimeImplTest.addTime" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simpletimeimpl" />
       <extension name="coverage">
@@ -81,6 +98,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SimpleDurationImplTest.plus" />
         <item itemvalue="JUnit.SimpleTimeImplTest.addTime" />
         <item itemvalue="JUnit.TimeTest.before" />
       </list>
@@ -116,9 +134,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/simpletimeimpl/src/test/java/simpletimeimpl/SimpleTimeImplTest.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/simpletimeimpl/src/test/java/simpletimeimpl/SimpleDurationImplTest.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

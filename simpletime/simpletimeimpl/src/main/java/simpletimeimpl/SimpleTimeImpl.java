@@ -7,9 +7,9 @@ public class SimpleTimeImpl implements Time {
     private int minutes;
     private int hours;
 
-    SimpleTimeImpl(int minutes, int hours) {
-        this.minutes = minutes;
+    public SimpleTimeImpl(int hours, int minutes) {
         this.hours = hours;
+        this.minutes = minutes;
     }
 
     @Override
