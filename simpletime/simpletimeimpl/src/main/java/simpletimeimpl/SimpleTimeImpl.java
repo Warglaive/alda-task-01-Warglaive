@@ -59,8 +59,8 @@ public class SimpleTimeImpl implements Time {
     @Override
     public Duration until(Time other) {
         //TODO: FIX
-        var hoursUntil = this.hours - other.getHours();
-        var minutesUntil = this.minutes - other.getMinutes();
+        var hoursUntil = Math.abs(this.hours - other.getHours());
+        var minutesUntil = Math.abs(this.minutes - other.getMinutes());
 
         return new SimpleDurationImpl(hoursUntil, minutesUntil);
     }
