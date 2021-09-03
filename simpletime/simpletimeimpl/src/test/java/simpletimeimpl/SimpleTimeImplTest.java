@@ -35,7 +35,7 @@ public class SimpleTimeImplTest {
     void addTimeMins() {
         int addMins = 5;
         var actual = this.time.addTime(addMins);
-        var expected = new SimpleTimeImpl(2, 2);
+        var expected = new SimpleTimeImpl(1, 6);
         assertThat(actual).usingRecursiveComparison().isEqualTo(expected);
     }
 
