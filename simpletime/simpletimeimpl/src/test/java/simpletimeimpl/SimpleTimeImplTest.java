@@ -7,10 +7,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class SimpleTimeImplTest {
-    private int defaultHour = 0;
-    private int defaultMin = 0;
+    private int defaultHour = 1;
+    private int defaultMin = 1;
 
-    SimpleTimeImpl time;
+    private SimpleTimeImpl time;
 
     @BeforeEach
     void setUp() {
@@ -23,7 +23,8 @@ public class SimpleTimeImplTest {
     @Test
     void addTime() {
         var toBeAdded = new SimpleTimeImpl(1, 1);
-        this.time.addTime(toBeAdded);
-        assertThat(this.time).isLessThan(new SimpleTimeImpl(2, 2));
+        var actual = this.time.addTime(toBeAdded);
+        var expected = new SimpleTimeImpl(2, 2);
+        assertThat(actual).usingRecursiveComparison().isEqualTo(expected);
     }
 }

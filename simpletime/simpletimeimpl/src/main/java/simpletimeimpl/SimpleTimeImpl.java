@@ -14,7 +14,10 @@ public class SimpleTimeImpl implements Time {
 
     @Override
     public Time addTime(Time t) {
-        return null;
+        this.hours = getHours() + t.getHours();
+        this.minutes = getMinutes() + t.getMinutes();
+
+        return new SimpleTimeImpl(hours, minutes);
     }
 
     @Override
@@ -24,13 +27,13 @@ public class SimpleTimeImpl implements Time {
 
     @Override
     public int getHours() {
-        return 0;
+        return this.hours;
 
     }
 
     @Override
     public int getMinutes() {
-        return 0;
+        return this.minutes;
     }
 
     @Override
