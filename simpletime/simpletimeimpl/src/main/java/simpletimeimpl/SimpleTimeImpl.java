@@ -42,10 +42,6 @@ public class SimpleTimeImpl implements Time {
         return this.minutes;
     }
 
-    @Override
-    public Duration until(Time other) {
-        return null;
-    }
 
     @Override
     public int compareTo(Time o) {
@@ -60,4 +56,11 @@ public class SimpleTimeImpl implements Time {
         return 0;
     }
 
+    @Override
+    public Duration until(Time other) {
+        var hoursUntil = this.hours - other.getHours();
+        var minutesUntil = this.minutes - other.getMinutes();
+
+        return new SimpleDurationImpl(hoursUntil, minutesUntil);
+    }
 }

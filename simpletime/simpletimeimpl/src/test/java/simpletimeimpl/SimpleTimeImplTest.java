@@ -45,4 +45,28 @@ public class SimpleTimeImplTest {
         var other = new SimpleTimeImpl(2, 2);
         assertThat(first.compareTo(other)).isEqualTo(-1);
     }
+
+    @Test
+    void compareToMoreTest() {
+        var first = new SimpleTimeImpl(111, 1);
+        var other = new SimpleTimeImpl(2222, 2);
+        assertThat(first.compareTo(other)).isEqualTo(1);
+    }
+
+    @Test
+    void compareToEqualTest() {
+        var first = new SimpleTimeImpl(2, 2);
+        var other = new SimpleTimeImpl(2, 2);
+        assertThat(first.compareTo(other)).isEqualTo(0);
+    }
+
+    @Test
+    void untilTest() {
+        var time = new SimpleTimeImpl(12, 0);
+        var expectedDuration= new SimpleDurationImpl(0,30);
+        //returns 30 mins
+        var actualDuration= time.until(new SimpleTimeImpl(12,30));
+        assertThat(actualDuration).usingRecursiveComparison().isEqualTo(expectedDuration);
+
+    }
 }
