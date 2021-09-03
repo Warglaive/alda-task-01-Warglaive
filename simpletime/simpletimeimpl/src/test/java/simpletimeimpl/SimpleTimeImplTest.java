@@ -27,4 +27,11 @@ public class SimpleTimeImplTest {
         var expected = new SimpleTimeImpl(2, 2);
         assertThat(actual).usingRecursiveComparison().isEqualTo(expected);
     }
+
+    @Test
+    void compareToLessTest() {
+        var first = new SimpleTimeImpl(111, 1);
+        var other = new SimpleTimeImpl(2, 2);
+        assertThat(first.compareTo(other)).isEqualTo(-1);
+    }
 }

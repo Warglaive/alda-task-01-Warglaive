@@ -43,6 +43,14 @@ public class SimpleTimeImpl implements Time {
 
     @Override
     public int compareTo(Time o) {
+        int firstTotalMins = this.hours * 60 + this.minutes;
+        int otherTotalMins = o.getHours() * 60 + o.getMinutes();
+
+        if (firstTotalMins > otherTotalMins) {
+            return -1;
+        } else if (firstTotalMins < otherTotalMins) {
+            return 1;
+        }
         return 0;
     }
 }
