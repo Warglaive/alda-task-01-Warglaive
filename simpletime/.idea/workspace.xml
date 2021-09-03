@@ -152,14 +152,15 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/simpletimeimpl/src/test/java/simpletimeimpl/SimpleTimeImplTest.java</url>
-          <line>32</line>
+          <line>41</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/simpletime$All_in_simpletimeimpl.ic" NAME="All in simpletimeimpl Coverage Results" MODIFIED="1630661159823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/simpletime$All_in_simpletimeimpl.ic" NAME="All in simpletimeimpl Coverage Results" MODIFIED="1630662457557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/simpletime$All_in_simpletimeimpl__1_.ic" NAME="All in simpletimeimpl (1) Coverage Results" MODIFIED="1630662064018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/simpletime$All_in_simpletimeparent.ic" NAME="All in simpletimeparent Coverage Results" MODIFIED="1630661139704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

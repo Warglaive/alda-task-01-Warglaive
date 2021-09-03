@@ -22,7 +22,13 @@ public class SimpleTimeImpl implements Time {
 
     @Override
     public Time addTime(int minutes) {
-        return null;
+        int firstTotalMins = this.hours * 60 + this.minutes + minutes;
+
+        var hrsConverted = firstTotalMins / 60;
+        var minsConverted = firstTotalMins % 60;
+
+
+        return new SimpleTimeImpl(hrsConverted, minsConverted);
     }
 
     @Override
@@ -53,4 +59,5 @@ public class SimpleTimeImpl implements Time {
         }
         return 0;
     }
+
 }
