@@ -2,6 +2,7 @@ package simpletimeimpl;
 
 import simpletimeapi.Duration;
 
+import java.time.LocalTime;
 import java.util.Objects;
 
 public class SimpleDurationImpl implements Duration {
@@ -63,8 +64,8 @@ public class SimpleDurationImpl implements Duration {
 
     @Override
     public String toString() {
-        return "SimpleDurationImpl{" +
-                "totalTimeInMins=" + totalTimeInMins +
-                ", minutes}";
+        return LocalTime.MIN.plus(
+                java.time.Duration.ofMinutes( totalTimeInMins )
+        ).toString();
     }
 }

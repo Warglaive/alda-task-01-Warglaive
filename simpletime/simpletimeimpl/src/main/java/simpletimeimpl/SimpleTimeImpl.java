@@ -3,6 +3,7 @@ package simpletimeimpl;
 import simpletimeapi.Duration;
 import simpletimeapi.Time;
 
+import java.time.LocalTime;
 import java.util.Objects;
 
 public class SimpleTimeImpl implements Time {
@@ -83,9 +84,9 @@ public class SimpleTimeImpl implements Time {
 
     @Override
     public String toString() {
-        return "SimpleTimeImpl{" +
-                "totalTimeInMins=" + totalTimeInMins +
-                ", minutes}";
+          return LocalTime.MIN.plus(
+                java.time.Duration.ofMinutes( totalTimeInMins )
+        ).toString();
       //  return this.getHours() + ":" + this.getMinutes();
     }
 }

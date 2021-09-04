@@ -3,6 +3,7 @@ package simpletimeimpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalTime;
 import java.util.Objects;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -88,9 +89,9 @@ public class SimpleDurationImplTest {
 
     @Test
     void toStringTest() {
-        var first = new SimpleDurationImpl(2, 2);
-        assertThat(first.toString()).isEqualTo("SimpleDurationImpl{" +
-                "totalTimeInMins=" + first.asMinutes() +
-                ", minutes}");
+        var first = new SimpleTimeImpl(2, 2);
+        assertThat(first.toString()).isEqualTo(LocalTime.MIN.plus(
+                java.time.Duration.ofMinutes( first.asMinutes() )
+        ).toString());
     }
 }
