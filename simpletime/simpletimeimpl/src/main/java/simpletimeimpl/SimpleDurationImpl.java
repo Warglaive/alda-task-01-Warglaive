@@ -29,7 +29,7 @@ public class SimpleDurationImpl implements Duration {
 
     @Override
     public int asMinutes() {
-        int hoursToMinutes = this.hours / 60;
+        int hoursToMinutes = this.hours * 60;
         return hoursToMinutes + this.minutes;
     }
 

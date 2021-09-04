@@ -26,10 +26,45 @@ public class SimpleDurationImplTest {
         var expected = new SimpleDurationImpl(2, 2);
         assertThat(actual).usingRecursiveComparison().isEqualTo(expected);
     }
+
     @Test
     void compareToLessTest() {
         var first = new SimpleDurationImpl(111, 1);
         var other = new SimpleDurationImpl(2, 2);
         assertThat(first.compareTo(other)).isEqualTo(-1);
+    }
+
+    @Test
+    void compareToMoreTest() {
+        var first = new SimpleDurationImpl(111, 1);
+        var other = new SimpleDurationImpl(222, 2);
+        assertThat(first.compareTo(other)).isEqualTo(1);
+    }
+
+    @Test
+    void compareToEqualTest() {
+        var first = new SimpleDurationImpl(2, 2);
+        var other = new SimpleDurationImpl(2, 2);
+        assertThat(first.compareTo(other)).isEqualTo(0);
+    }
+
+    @Test
+    void asMinutesTest() {
+        var first = new SimpleDurationImpl(2, 2);
+        int expectedTime = 122;
+        assertThat(first.asMinutes()).isEqualTo(expectedTime);
+    }
+
+    @Test
+    void getHours() {
+        var first = new SimpleDurationImpl(2, 2);
+        assertThat(first.getHours()).isEqualTo(2);
+    }
+
+
+    @Test
+    void getMinutes() {
+        var first = new SimpleDurationImpl(2, 2);
+        assertThat(first.getMinutes()).isEqualTo(2);
     }
 }
