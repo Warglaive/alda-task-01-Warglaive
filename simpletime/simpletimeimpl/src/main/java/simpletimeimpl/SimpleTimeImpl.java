@@ -82,6 +82,6 @@ public class SimpleTimeImpl implements Time {
     public String toString() {
         return "SimpleTimeImpl{" +
                 "totalTimeInMins=" + totalTimeInMins +
-                '}';
+                ", minutes}";
     }
 }

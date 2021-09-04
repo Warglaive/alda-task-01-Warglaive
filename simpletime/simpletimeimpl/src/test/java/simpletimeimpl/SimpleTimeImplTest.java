@@ -99,6 +99,6 @@ public class SimpleTimeImplTest {
         var first = new SimpleTimeImpl(2, 2);
         assertThat(first.toString()).isEqualTo("SimpleTimeImpl{" +
                 "totalTimeInMins=" + first.asMinutes() +
-                '}');
+                ", minutes}");
     }
 }
