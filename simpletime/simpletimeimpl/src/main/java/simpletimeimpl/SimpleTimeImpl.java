@@ -3,6 +3,8 @@ package simpletimeimpl;
 import simpletimeapi.Duration;
 import simpletimeapi.Time;
 
+import java.util.Objects;
+
 public class SimpleTimeImpl implements Time {
     private   int totalTimeInMins;
 
@@ -61,5 +63,25 @@ public class SimpleTimeImpl implements Time {
         var minutesUntil = Math.abs(this.getMinutes() - other.getMinutes());
 
         return new SimpleDurationImpl(hoursUntil, minutesUntil);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        SimpleTimeImpl that = (SimpleTimeImpl) o;
+        return totalTimeInMins == that.totalTimeInMins;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(totalTimeInMins);
+    }
+
+    @Override
+    public String toString() {
+        return "SimpleTimeImpl{" +
+                "totalTimeInMins=" + totalTimeInMins +
+                '}';
     }
 }

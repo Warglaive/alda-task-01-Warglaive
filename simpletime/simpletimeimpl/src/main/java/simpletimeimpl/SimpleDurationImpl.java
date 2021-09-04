@@ -60,4 +60,11 @@ public class SimpleDurationImpl implements Duration {
     public int hashCode() {
         return Objects.hash(totalTimeInMins);
     }
+
+    @Override
+    public String toString() {
+        return "SimpleDurationImpl{" +
+                "totalTimeInMins=" + totalTimeInMins +
+                '}';
+    }
 }
