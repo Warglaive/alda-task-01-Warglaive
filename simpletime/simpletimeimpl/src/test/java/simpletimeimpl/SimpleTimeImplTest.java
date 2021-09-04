@@ -7,14 +7,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class SimpleTimeImplTest {
-   /* private int defaultHour = 1;*/
-   /* private int defaultMin = 1;*/
+    private int defaultHour = 0;
+    private int defaultMin = 0;
 
     private SimpleTimeImpl time;
 
     @BeforeEach
     void setUp() {
-        this.time = new SimpleTimeImpl(1, 1);
+        this.time = new SimpleTimeImpl(this.defaultHour, this.defaultMin);
     }
 
     /**
@@ -24,7 +24,7 @@ public class SimpleTimeImplTest {
     void addTimeTest() {
         var toBeAdded = new SimpleTimeImpl(1, 1);
         var actual = this.time.addTime(toBeAdded);
-        var expected = new SimpleTimeImpl(2, 2);
+        var expected = new SimpleTimeImpl(1, 1);
         assertThat(actual).usingRecursiveComparison().isEqualTo(expected);
     }
 
@@ -35,7 +35,7 @@ public class SimpleTimeImplTest {
     void addTimeMins() {
         int addMins = 5;
         var actual = this.time.addTime(addMins);
-        var expected = new SimpleTimeImpl(1, 6);
+        var expected = new SimpleTimeImpl(0, addMins);
         assertThat(actual).usingRecursiveComparison().isEqualTo(expected);
     }
 
@@ -72,11 +72,11 @@ public class SimpleTimeImplTest {
     //Fields testing
     @Test
     void getHours() {
-        assertThat(this.time.getHours()).isEqualTo(1);
+        assertThat(this.time.getHours()).isEqualTo(0);
     }
 
     @Test
     void getMinutes() {
-        assertThat(this.time.getMinutes()).isEqualTo(1);
+        assertThat(this.time.getMinutes()).isEqualTo(0);
     }
 }

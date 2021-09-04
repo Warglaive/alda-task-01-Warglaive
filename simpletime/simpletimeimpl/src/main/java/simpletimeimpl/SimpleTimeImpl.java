@@ -4,28 +4,29 @@ import simpletimeapi.Duration;
 import simpletimeapi.Time;
 
 public class SimpleTimeImpl implements Time {
-    private int minutes;
-    private int hours;
+    /* private int minutes;*/
+    /* private int hours;*/
+    int totalTimeInMins = 0;
 
     public SimpleTimeImpl(int hours, int minutes) {
-        this.hours = hours;
-        this.minutes = minutes;
+        this.totalTimeInMins = hours * 60 + minutes;
+
     }
 
     @Override
     public Time addTime(Time t) {
-        this.hours = getHours() + t.getHours();
-        this.minutes = getMinutes() + t.getMinutes();
+
+        int hours = getHours() + t.getHours();
+        int minutes = getMinutes() + t.getMinutes();
 
         return new SimpleTimeImpl(hours, minutes);
     }
 
     @Override
     public Time addTime(int minutes) {
-        int firstTotalMins = this.hours * 60 + this.minutes + minutes;
-
-        var hrsConverted = firstTotalMins / 60;
-        var minsConverted = firstTotalMins % 60;
+        this.totalTimeInMins += minutes;
+        var hrsConverted = this.totalTimeInMins / 60;
+        var minsConverted = this.totalTimeInMins % 60;
 
 
         return new SimpleTimeImpl(hrsConverted, minsConverted);
@@ -33,24 +34,24 @@ public class SimpleTimeImpl implements Time {
 
     @Override
     public int getHours() {
-        return this.hours;
+        return this.totalTimeInMins / 60;
 
     }
 
     @Override
     public int getMinutes() {
-        return this.minutes;
+        return this.totalTimeInMins % 60;
     }
 
 
     @Override
     public int compareTo(Time o) {
-        int firstTotalMins = this.hours * 60 + this.minutes;
+
         int otherTotalMins = o.getHours() * 60 + o.getMinutes();
 
-        if (firstTotalMins > otherTotalMins) {
+        if (this.totalTimeInMins > otherTotalMins) {
             return -1;
-        } else if (firstTotalMins < otherTotalMins) {
+        } else if (this.totalTimeInMins < otherTotalMins) {
             return 1;
         }
         return 0;
@@ -58,8 +59,8 @@ public class SimpleTimeImpl implements Time {
 
     @Override
     public Duration until(Time other) {
-        var hoursUntil = Math.abs(this.hours - other.getHours());
-        var minutesUntil = Math.abs(this.minutes - other.getMinutes());
+        var hoursUntil = Math.abs(this.getHours() - other.getHours());
+        var minutesUntil = Math.abs(this.getMinutes() - other.getMinutes());
 
         return new SimpleDurationImpl(hoursUntil, minutesUntil);
     }
