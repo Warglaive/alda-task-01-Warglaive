@@ -31,13 +31,13 @@ public class SimpleDurationImplTest {
     void compareToLessTest() {
         var first = new SimpleDurationImpl(111, 1);
         var other = new SimpleDurationImpl(2, 2);
-        assertThat(first.compareTo(other)).isEqualTo(-1);
+        assertThat(first.compareTo(other)).isEqualTo(1);
     }
 
     @Test
     void compareToMoreTest() {
-        var first = new SimpleDurationImpl(111, 1);
-        var other = new SimpleDurationImpl(222, 2);
+        var first = new SimpleDurationImpl(0, 600);
+        var other = new SimpleDurationImpl(9, 59);
         assertThat(first.compareTo(other)).isEqualTo(1);
     }
 
