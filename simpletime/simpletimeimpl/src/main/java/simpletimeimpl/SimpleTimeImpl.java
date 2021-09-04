@@ -6,7 +6,7 @@ import simpletimeapi.Time;
 import java.util.Objects;
 
 public class SimpleTimeImpl implements Time {
-    private int totalTimeInMins;
+    final private int totalTimeInMins;
 
     public SimpleTimeImpl(int hours, int minutes) {
         this.totalTimeInMins = hours * 60 + minutes;
@@ -24,9 +24,9 @@ public class SimpleTimeImpl implements Time {
 
     @Override
     public Time addTime(int minutes) {
-        this.totalTimeInMins += minutes;
-        var hrsConverted = this.totalTimeInMins / 60;
-        var minsConverted = this.totalTimeInMins % 60;
+        int totalMinutes = this.totalTimeInMins + minutes;
+        var hrsConverted = totalMinutes / 60;
+        var minsConverted = totalMinutes % 60;
 
 
         return new SimpleTimeImpl(hrsConverted, minsConverted);
