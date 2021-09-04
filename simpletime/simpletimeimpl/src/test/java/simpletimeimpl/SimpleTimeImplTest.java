@@ -7,14 +7,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class SimpleTimeImplTest {
-    private int defaultHour = 0;
-    private int defaultMin = 0;
+
 
     private SimpleTimeImpl time;
 
     @BeforeEach
     void setUp() {
-        this.time = new SimpleTimeImpl(this.defaultHour, this.defaultMin);
+        this.time = new SimpleTimeImpl(0, 0);
     }
 
     /**
