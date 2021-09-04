@@ -42,15 +42,15 @@ public class SimpleTimeImplTest {
 
     @Test
     void compareToLessTest() {
-        var first = new SimpleTimeImpl(111, 1);
+        var first = new SimpleTimeImpl(3, 1);
         var other = new SimpleTimeImpl(2, 2);
         assertThat(first.compareTo(other)).isEqualTo(-1);
     }
 
     @Test
     void compareToMoreTest() {
-        var first = new SimpleTimeImpl(111, 1);
-        var other = new SimpleTimeImpl(2222, 2);
+        var first = new SimpleTimeImpl(1, 1);
+        var other = new SimpleTimeImpl(2, 2);
         assertThat(first.compareTo(other)).isEqualTo(1);
     }
 

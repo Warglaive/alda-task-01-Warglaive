@@ -83,9 +83,9 @@ public class SimpleTimeImpl implements Time {
 
     @Override
     public String toString() {
-      /*  return "SimpleTimeImpl{" +
+        return "SimpleTimeImpl{" +
                 "totalTimeInMins=" + totalTimeInMins +
-                ", minutes}";*/
-        return this.getHours() + ":" + this.getMinutes();
+                ", minutes}";
+      //  return this.getHours() + ":" + this.getMinutes();
     }
 }
