@@ -7,7 +7,7 @@ import java.util.Objects;
 public class SimpleDurationImpl implements Duration {
     /*   private int minutes*/;
     /*   private int hours;*/
-    private int totalTimeInMins;
+    private final int totalTimeInMins;
 
     public SimpleDurationImpl(int hours, int minutes) {
         this.totalTimeInMins = hours * 60 + minutes;
