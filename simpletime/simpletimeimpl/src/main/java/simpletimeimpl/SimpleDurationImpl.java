@@ -45,5 +45,4 @@ public class SimpleDurationImpl implements Duration {
         }
         return 0;
     }
-
 }

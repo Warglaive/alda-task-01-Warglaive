@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11243aa0-4347-4a9f-9957-921a64185c73" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/alda-task-01-Warglaive.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simpletimeimpl/src/test/java/simpletimeimpl/SimpleDurationImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/simpletimeimpl/src/test/java/simpletimeimpl/SimpleDurationImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simpletimeimpl/src/test/java/simpletimeimpl/APFactoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,15 +50,7 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.All in simpletimeimpl">
-    <configuration name="All in simpletimeimpl" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="simpletimeimpl" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SimpleDurationImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="APFactoryTest.createDuration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simpletimeimpl" />
       <extension name="coverage">
         <pattern>
@@ -69,8 +59,49 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="simpletimeimpl" />
-      <option name="MAIN_CLASS_NAME" value="simpletimeimpl.SimpleDurationImplTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="simpletimeimpl.APFactoryTest" />
+      <option name="METHOD_NAME" value="createDuration" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="APFactoryTest.createDurationFromMins" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simpletimeimpl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="simpletimeimpl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="simpletimeimpl" />
+      <option name="MAIN_CLASS_NAME" value="simpletimeimpl.APFactoryTest" />
+      <option name="METHOD_NAME" value="createDurationFromMins" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="APFactoryTest.createTime" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simpletimeimpl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="simpletimeimpl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="simpletimeimpl" />
+      <option name="MAIN_CLASS_NAME" value="simpletimeimpl.APFactoryTest" />
+      <option name="METHOD_NAME" value="createTime" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in simpletimeimpl" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simpletimeimpl" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -91,45 +122,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleDurationImplTest.compareToEqualTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="simpletimeimpl" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="simpletimeimpl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="simpletimeimpl" />
-      <option name="MAIN_CLASS_NAME" value="simpletimeimpl.SimpleDurationImplTest" />
-      <option name="METHOD_NAME" value="compareToEqualTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SimpleDurationImplTest.compareToMoreTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="simpletimeimpl" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="simpletimeimpl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="simpletimeimpl" />
-      <option name="MAIN_CLASS_NAME" value="simpletimeimpl.SimpleDurationImplTest" />
-      <option name="METHOD_NAME" value="compareToMoreTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in simpletimeimpl" />
+        <item itemvalue="JUnit.APFactoryTest.createDurationFromMins" />
+        <item itemvalue="JUnit.APFactoryTest.createDuration" />
+        <item itemvalue="JUnit.APFactoryTest.createTime" />
         <item itemvalue="JUnit.SimpleDurationImplTest.asMinutesTest" />
-        <item itemvalue="JUnit.SimpleDurationImplTest" />
-        <item itemvalue="JUnit.SimpleDurationImplTest.compareToEqualTest" />
-        <item itemvalue="JUnit.SimpleDurationImplTest.compareToMoreTest" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +180,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/simpletime$All_in_simpletimeimpl.ic" NAME="All in simpletimeimpl Coverage Results" MODIFIED="1630765750440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/simpletime$All_in_simpletimeimpl.ic" NAME="All in simpletimeimpl Coverage Results" MODIFIED="1630766162204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/simpletime$SimpleDurationImplTest_plus.ic" NAME="SimpleDurationImplTest.plus Coverage Results" MODIFIED="1630765910719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>simpletimeimpl.*</FILTER>
     </SUITE>

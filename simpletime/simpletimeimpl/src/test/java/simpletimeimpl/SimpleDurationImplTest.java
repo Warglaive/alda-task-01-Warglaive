@@ -67,4 +67,5 @@ public class SimpleDurationImplTest {
         var first = new SimpleDurationImpl(2, 2);
         assertThat(first.getMinutes()).isEqualTo(2);
     }
+
 }
