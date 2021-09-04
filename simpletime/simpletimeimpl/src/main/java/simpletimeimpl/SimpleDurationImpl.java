@@ -61,10 +61,10 @@ public class SimpleDurationImpl implements Duration {
         return Objects.hash(totalTimeInMins);
     }
 
-   /* @Override
+    @Override
     public String toString() {
         return "SimpleDurationImpl{" +
                 "totalTimeInMins=" + totalTimeInMins +
                 '}';
-    }*/
+    }
 }

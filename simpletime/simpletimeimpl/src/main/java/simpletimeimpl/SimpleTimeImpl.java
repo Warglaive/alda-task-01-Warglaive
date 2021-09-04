@@ -6,7 +6,7 @@ import simpletimeapi.Time;
 import java.util.Objects;
 
 public class SimpleTimeImpl implements Time {
-    private   int totalTimeInMins;
+    private int totalTimeInMins;
 
     public SimpleTimeImpl(int hours, int minutes) {
         this.totalTimeInMins = hours * 60 + minutes;

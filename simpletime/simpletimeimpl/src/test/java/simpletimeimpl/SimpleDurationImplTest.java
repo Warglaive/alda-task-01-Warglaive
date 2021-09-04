@@ -3,6 +3,8 @@ package simpletimeimpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.Objects;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class SimpleDurationImplTest {
@@ -69,5 +71,26 @@ public class SimpleDurationImplTest {
     @Test
     void fieldTest() {
         assertThat(this.duration).hasFieldOrProperty("totalTimeInMins");
+    }
+
+    @Test
+    void equalsTest() {
+        var first = new SimpleDurationImpl(2, 2);
+        var other = new SimpleDurationImpl(2, 2);
+        assertThat(first.equals(other)).isTrue();
+    }
+
+    @Test
+    void hashCodeTest() {
+        var first = new SimpleDurationImpl(2, 2);
+        assertThat(first.hashCode()).isEqualTo(Objects.hash(first.asMinutes()));
+    }
+
+    @Test
+    void toStringTest() {
+        var first = new SimpleDurationImpl(2, 2);
+        assertThat(first.toString()).isEqualTo("SimpleDurationImpl{" +
+                "totalTimeInMins=" + first.asMinutes() +
+                '}');
     }
 }
