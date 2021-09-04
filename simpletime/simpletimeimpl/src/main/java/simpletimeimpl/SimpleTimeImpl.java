@@ -10,7 +10,11 @@ public class SimpleTimeImpl implements Time {
 
     public SimpleTimeImpl(int hours, int minutes) {
         this.totalTimeInMins = hours * 60 + minutes;
-
+        if (this.totalTimeInMins < 0) {
+            throw new IllegalArgumentException("Total minutes can NOT be lower than 0");
+        } else if (this.totalTimeInMins > 24 * 60) {
+            throw new IllegalArgumentException("Total minutes can NOT be bigger than 24*60");
+        }
     }
 
     @Override
@@ -27,7 +31,6 @@ public class SimpleTimeImpl implements Time {
         int totalMinutes = this.totalTimeInMins + minutes;
         var hrsConverted = totalMinutes / 60;
         var minsConverted = totalMinutes % 60;
-
 
         return new SimpleTimeImpl(hrsConverted, minsConverted);
     }
@@ -80,8 +83,9 @@ public class SimpleTimeImpl implements Time {
 
     @Override
     public String toString() {
-        return "SimpleTimeImpl{" +
+      /*  return "SimpleTimeImpl{" +
                 "totalTimeInMins=" + totalTimeInMins +
-                ", minutes}";
+                ", minutes}";*/
+        return this.getHours() + ":" + this.getMinutes();
     }
 }
