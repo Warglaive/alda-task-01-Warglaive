@@ -4,7 +4,7 @@ import simpletimeapi.Duration;
 import simpletimeapi.Time;
 
 public class SimpleTimeImpl implements Time {
-    int totalTimeInMins = 0;
+    private   int totalTimeInMins;
 
     public SimpleTimeImpl(int hours, int minutes) {
         this.totalTimeInMins = hours * 60 + minutes;

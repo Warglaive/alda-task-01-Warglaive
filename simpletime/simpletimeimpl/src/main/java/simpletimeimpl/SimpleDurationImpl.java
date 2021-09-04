@@ -5,40 +5,39 @@ import simpletimeapi.Duration;
 import java.util.Objects;
 
 public class SimpleDurationImpl implements Duration {
-    private int minutes;
-    private int hours;
+    /*   private int minutes*/;
+    /*   private int hours;*/
+    private int totalTimeInMins;
 
     public SimpleDurationImpl(int hours, int minutes) {
-        this.hours = hours;
-        this.minutes = minutes;
+        this.totalTimeInMins = hours * 60 + minutes;
     }
 
     @Override
     public Duration plus(Duration duration) {
-        return new SimpleDurationImpl(duration.getHours() + this.hours, duration.getMinutes() + this.minutes);
+        return new SimpleDurationImpl(duration.getHours() + this.getHours(), duration.getMinutes() + this.getMinutes());
     }
 
 
     @Override
     public int getHours() {
-        return this.hours;
+        return this.totalTimeInMins / 60;
     }
 
     @Override
     public int getMinutes() {
-        return this.minutes;
+        return this.totalTimeInMins % 60;
     }
 
     @Override
     public int asMinutes() {
-        int hoursToMinutes = this.hours * 60;
-        return hoursToMinutes + this.minutes;
+        return totalTimeInMins;
     }
 
     @Override
     public int compareTo(Duration o) {
         //TODO: FIX
-        int firstTotalMins = this.hours * 60 + this.minutes;
+        int firstTotalMins = this.getHours() * 60 + this.getMinutes();
         int otherTotalMins = o.getHours() * 60 + o.getMinutes();
 
         if (firstTotalMins > otherTotalMins) {
@@ -54,11 +53,11 @@ public class SimpleDurationImpl implements Duration {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         SimpleDurationImpl that = (SimpleDurationImpl) o;
-        return minutes == that.minutes && hours == that.hours;
+        return totalTimeInMins == that.totalTimeInMins;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(minutes, hours);
+        return Objects.hash(totalTimeInMins);
     }
 }
