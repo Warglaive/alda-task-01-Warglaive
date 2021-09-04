@@ -65,6 +65,6 @@ public class SimpleDurationImpl implements Duration {
     public String toString() {
         return "SimpleDurationImpl{" +
                 "totalTimeInMins=" + totalTimeInMins +
-                '}';
+                ", minutes}";
     }
 }
