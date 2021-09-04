@@ -4,8 +4,6 @@ import simpletimeapi.Duration;
 import simpletimeapi.Time;
 
 public class SimpleTimeImpl implements Time {
-    /* private int minutes;*/
-    /* private int hours;*/
     int totalTimeInMins = 0;
 
     public SimpleTimeImpl(int hours, int minutes) {
