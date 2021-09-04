@@ -57,15 +57,13 @@ public class SimpleDurationImplTest {
 
     @Test
     void getHours() {
-        var first = new SimpleDurationImpl(2, 2);
-        assertThat(first.getHours()).isEqualTo(2);
+        assertThat(this.duration.getHours()).isEqualTo(1);
     }
 
 
     @Test
     void getMinutes() {
-        var first = new SimpleDurationImpl(2, 2);
-        assertThat(first.getMinutes()).isEqualTo(2);
+        assertThat(this.duration.getMinutes()).isEqualTo(1);
     }
 
 }
