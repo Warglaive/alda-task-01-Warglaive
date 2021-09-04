@@ -66,4 +66,8 @@ public class SimpleDurationImplTest {
         assertThat(this.duration.getMinutes()).isEqualTo(1);
     }
 
+    @Test
+    void fieldTest() {
+        assertThat(this.duration).hasFieldOrProperty("totalTimeInMins");
+    }
 }
