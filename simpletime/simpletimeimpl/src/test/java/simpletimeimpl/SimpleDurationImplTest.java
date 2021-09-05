@@ -31,7 +31,7 @@ public class SimpleDurationImplTest {
 
     @Test
     void compareToLessTest() {
-        var first = new SimpleDurationImpl(111, 1);
+        var first = new SimpleDurationImpl(11, 1);
         var other = new SimpleDurationImpl(2, 2);
         assertThat(first.compareTo(other)).isEqualTo(1);
     }

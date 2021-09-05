@@ -11,6 +11,12 @@ public class SimpleDurationImpl implements Duration {
 
     public SimpleDurationImpl(int hours, int minutes) {
         this.totalTimeInMins = hours * 60 + minutes;
+
+        if (this.totalTimeInMins < 0) {
+            throw new IllegalArgumentException("Total minutes can NOT be lower than 0");
+        } else if (this.totalTimeInMins > 24 * 60) {
+            throw new IllegalArgumentException("Total minutes can NOT be bigger than 24*60");
+        }
     }
 
     @Override
@@ -67,4 +73,8 @@ public class SimpleDurationImpl implements Duration {
                 "totalTimeInMins=" + totalTimeInMins +
                 ", minutes}";
     }
+
+    /*public void betweenTimes(){
+        this.totalTimeInMins
+    }*/
 }
