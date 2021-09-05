@@ -72,7 +72,7 @@ public class SimpleDurationImpl implements Duration {
                 ", minutes}";
     }
 
-   /* public Duration betweenTimes(SimpleTimeImpl first, SimpleTimeImpl last) {
+    public Duration betweenTimes(SimpleTimeImpl first, SimpleTimeImpl last) {
         //1. make both to mins, substract smaller from bigger, make to hrs and mins again
         int firstTotalMins = first.asMinutes();
         int lastTotalMins = last.asMinutes();
@@ -95,5 +95,5 @@ public class SimpleDurationImpl implements Duration {
 
         return new SimpleDurationImpl(hour, mins);
 
-    }*/
+    }
 }

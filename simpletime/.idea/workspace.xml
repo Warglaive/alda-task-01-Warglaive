@@ -190,11 +190,16 @@
           <line>124</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/simpletimeimpl/src/test/java/simpletimeimpl/SimpleDurationImplTest.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/simpletime$All_in_simpletimeimpl.ic" NAME="All in simpletimeimpl Coverage Results" MODIFIED="1630842457604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/simpletime$All_in_simpletimeimpl.ic" NAME="All in simpletimeimpl Coverage Results" MODIFIED="1630844619280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/simpletime$SimpleDurationImplTest_plus.ic" NAME="SimpleDurationImplTest.plus Coverage Results" MODIFIED="1630765910719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>simpletimeimpl.*</FILTER>
     </SUITE>
