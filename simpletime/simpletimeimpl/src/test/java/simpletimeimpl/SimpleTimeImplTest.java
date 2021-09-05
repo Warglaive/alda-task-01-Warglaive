@@ -75,7 +75,7 @@ public class SimpleTimeImplTest {
         assertThat(actualDuration).usingRecursiveComparison().isEqualTo(expectedDuration);
     }
 
-    @Test
+  /*  @Test
     void untilTest2() {
         var from = new SimpleTimeImpl(9, 35);
         var until = new SimpleTimeImpl(9, 15);
@@ -84,7 +84,7 @@ public class SimpleTimeImplTest {
         //returns 30 mins
         var actualDuration = from.until(until);
         assertThat(actualDuration).usingRecursiveComparison().isEqualTo(expectedDuration);
-    }
+    }*/
 
 
     //Fields testing
