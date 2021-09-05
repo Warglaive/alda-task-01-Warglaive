@@ -5,8 +5,6 @@ import simpletimeapi.Duration;
 import java.util.Objects;
 
 public class SimpleDurationImpl implements Duration {
-    /*   private int minutes*/;
-    /*   private int hours;*/
     private final int totalTimeInMins;
 
     public SimpleDurationImpl(int hours, int minutes) {
@@ -74,7 +72,28 @@ public class SimpleDurationImpl implements Duration {
                 ", minutes}";
     }
 
-    /*public void betweenTimes(){
-        this.totalTimeInMins
-    }*/
+    public Duration betweenTimes(SimpleTimeImpl first, SimpleTimeImpl last) {
+        //1. make both to mins, substract smaller from bigger, make to hrs and mins again
+        int firstTotalMins = first.asMinutes();
+        int lastTotalMins = last.asMinutes();
+        // check which is bigger time in minutes
+        int bigger = 0;
+        int smaller = 0;
+        if (firstTotalMins > lastTotalMins) {
+            bigger = firstTotalMins;
+            smaller = lastTotalMins;
+        } else {
+            bigger = lastTotalMins;
+            smaller = firstTotalMins;
+        }
+
+        //calculate hours and mins
+        int durationAsMins = bigger - smaller;
+
+        int hour = durationAsMins / 60;
+        int mins = durationAsMins % 60;
+
+        return new SimpleDurationImpl(hour, mins);
+
+    }
 }

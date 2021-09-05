@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11243aa0-4347-4a9f-9957-921a64185c73" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simpletimeimpl/src/main/java/simpletimeimpl/SimpleDurationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/simpletimeimpl/src/main/java/simpletimeimpl/SimpleDurationImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpletimeimpl/src/test/java/simpletimeimpl/SimpleDurationImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/simpletimeimpl/src/test/java/simpletimeimpl/SimpleDurationImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +67,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SimpleDurationImplTest.betweenTimes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simpletimeimpl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="simpletimeimpl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="simpletimeimpl" />
+      <option name="MAIN_CLASS_NAME" value="simpletimeimpl.SimpleDurationImplTest" />
+      <option name="METHOD_NAME" value="betweenTimes" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SimpleTimeImplTest.compareToLessTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simpletimeimpl" />
       <extension name="coverage">
@@ -115,29 +131,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleTimeImplTest.toStringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="simpletimeimpl" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="simpletimeimpl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="simpletimeimpl" />
-      <option name="MAIN_CLASS_NAME" value="simpletimeimpl.SimpleTimeImplTest" />
-      <option name="METHOD_NAME" value="toStringTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in simpletimeimpl" />
+        <item itemvalue="JUnit.SimpleDurationImplTest.betweenTimes" />
         <item itemvalue="JUnit.SimpleTimeImplTest.isBeforeOrEqual" />
         <item itemvalue="JUnit.SimpleTimeImplTest.isBefore" />
         <item itemvalue="JUnit.SimpleTimeImplTest.compareToLessTest" />
-        <item itemvalue="JUnit.SimpleTimeImplTest.toStringTest" />
       </list>
     </recent_temporary>
   </component>

@@ -93,4 +93,15 @@ public class SimpleDurationImplTest {
                 "totalTimeInMins=" + first.asMinutes() +
                 ", minutes}");
     }
+
+    @Test
+    void betweenTimes() {
+        var first = new SimpleTimeImpl(1, 30);
+        var last = new SimpleTimeImpl(2, 0);
+        //expected result = 30 mins
+        var expected = new SimpleDurationImpl(0, 30);
+        //
+        var duration = new SimpleDurationImpl(1, 1);
+        assertThat(duration.betweenTimes(first, last)).isEqualTo(expected);
+    }
 }
