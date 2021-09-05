@@ -126,4 +126,15 @@ public class SimpleTimeImplTest {
         var after = new SimpleTimeImpl(lastHours, lastMinutes);
         assertThat(before.isBeforeOrEqual(after)).isTrue();
     }
+
+    @Test
+    void betweenTimes() {
+        var first = new SimpleTimeImpl(1, 30);
+        var last = new SimpleTimeImpl(2, 0);
+        //expected result = 30 mins
+        var expected = new SimpleDurationImpl(0, 30);
+        //
+        var time = new SimpleTimeImpl(1, 1);
+        assertThat(time.betweenTimes(first, last)).isEqualTo(expected);
+    }
 }
