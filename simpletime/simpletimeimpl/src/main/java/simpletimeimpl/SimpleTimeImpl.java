@@ -10,10 +10,11 @@ public class SimpleTimeImpl implements Time {
     final private int totalTimeInMins;
 
     public SimpleTimeImpl(int hours, int minutes) {
-        /*if (hours > 23) {
+        if (hours > 23) {
             throw new IllegalArgumentException("Hours can NOT be > 23");
         }
-        if (minutes > 59) {
+
+     /*   if (minutes > 59) {
             throw new IllegalArgumentException("Minutes can NOT be > 59");
         }*/
         //
