@@ -36,6 +36,13 @@ public class APFactory implements AbstractAPFactory {
      */
     @Override
     public Time createTime(int hours, int minutes) {
+        if (hours>=24){
+            throw new IllegalArgumentException("Hours can NOT be >= 24");
+        }
+        if (minutes>=60){
+            throw new IllegalArgumentException("Minutes can NOT be >= 60");
+        }
+        //
         //TODO
         int totalTimeInMins = (hours * 60) + minutes;
         if (totalTimeInMins < 0) {
