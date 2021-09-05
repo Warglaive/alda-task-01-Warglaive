@@ -68,7 +68,6 @@ public class SimpleTimeImpl implements Time {
     }
 
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -84,10 +83,10 @@ public class SimpleTimeImpl implements Time {
 
     @Override
     public String toString() {
-          return LocalTime.MIN.plus(
-                java.time.Duration.ofMinutes( totalTimeInMins )
+        return LocalTime.MIN.plus(
+                java.time.Duration.ofMinutes(totalTimeInMins)
         ).toString();
-      //  return this.getHours() + ":" + this.getMinutes();
+        //  return this.getHours() + ":" + this.getMinutes();
     }
 
     @Override
@@ -99,10 +98,37 @@ public class SimpleTimeImpl implements Time {
     public boolean isBeforeOrEqual(Time other) {
         return Time.super.isBeforeOrEqual(other);
     }
-  /*  public Duration betweenTimes(SimpleTimeImpl first, SimpleTimeImpl last) {
+
+    /*  public Duration betweenTimes(SimpleTimeImpl first, SimpleTimeImpl last) {
+          //1. make both to mins, substract smaller from bigger, make to hrs and mins again
+          int firstTotalMins = first.asMinutes();
+          int lastTotalMins = last.asMinutes();
+          // check which is bigger time in minutes
+          int bigger = 0;
+          int smaller = 0;
+          if (firstTotalMins > lastTotalMins) {
+              bigger = firstTotalMins;
+              smaller = lastTotalMins;
+          } else {
+              bigger = lastTotalMins;
+              smaller = firstTotalMins;
+          }
+
+          //calculate hours and mins
+          int durationAsMins = bigger - smaller;
+
+          int hour = durationAsMins / 60;
+          int mins = durationAsMins % 60;
+
+          return new SimpleDurationImpl(hour, mins);
+
+      }*/
+    @Override
+    public Duration until(Time until) {
+
         //1. make both to mins, substract smaller from bigger, make to hrs and mins again
-        int firstTotalMins = first.asMinutes();
-        int lastTotalMins = last.asMinutes();
+        int firstTotalMins = this.asMinutes();
+        int lastTotalMins = until.asMinutes();
         // check which is bigger time in minutes
         int bigger = 0;
         int smaller = 0;
@@ -117,40 +143,15 @@ public class SimpleTimeImpl implements Time {
         //calculate hours and mins
         int durationAsMins = bigger - smaller;
 
+        //Check if other time is on the other day, then add 24 * 60 = 1440 - result from operation
+        if (until.isBefore(this)) {
+            durationAsMins = 1440 - durationAsMins;
+        }
+
+
         int hour = durationAsMins / 60;
         int mins = durationAsMins % 60;
 
         return new SimpleDurationImpl(hour, mins);
-
-    }*/
-  @Override
-  public Duration until(Time other) {
-   /*   var hoursUntil = Math.abs(this.getHours() - other.getHours());
-      var minutesUntil = Math.abs(this.getMinutes() - other.getMinutes());
-
-      return new SimpleDurationImpl(hoursUntil, minutesUntil);*/
-
-
-      //1. make both to mins, substract smaller from bigger, make to hrs and mins again
-      int firstTotalMins = this.asMinutes();
-      int lastTotalMins = other.asMinutes();
-      // check which is bigger time in minutes
-      int bigger = 0;
-      int smaller = 0;
-      if (firstTotalMins > lastTotalMins) {
-          bigger = firstTotalMins;
-          smaller = lastTotalMins;
-      } else {
-          bigger = lastTotalMins;
-          smaller = firstTotalMins;
-      }
-
-      //calculate hours and mins
-      int durationAsMins = bigger - smaller;
-
-      int hour = durationAsMins / 60;
-      int mins = durationAsMins % 60;
-
-      return new SimpleDurationImpl(hour, mins);
-  }
+    }
 }
