@@ -2,6 +2,8 @@ package simpletimeimpl;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import java.time.LocalTime;
 import java.util.Objects;
@@ -45,14 +47,16 @@ public class SimpleTimeImplTest {
     void compareToLessTest() {
         var first = new SimpleTimeImpl(3, 1);
         var other = new SimpleTimeImpl(2, 2);
-        assertThat(first.compareTo(other)).isEqualTo(-1);
+        /*assertThat(first.compareTo(other)).isEqualTo(-1);*/
+        assertThat(first.compareTo(other)).isEqualTo(1);
     }
 
     @Test
     void compareToMoreTest() {
         var first = new SimpleTimeImpl(1, 1);
         var other = new SimpleTimeImpl(2, 2);
-        assertThat(first.compareTo(other)).isEqualTo(1);
+        /*assertThat(first.compareTo(other)).isEqualTo(1);*/
+        assertThat(first.compareTo(other)).isEqualTo(-1);
     }
 
     @Test
@@ -99,12 +103,27 @@ public class SimpleTimeImplTest {
     void toStringTest() {
         var first = new SimpleTimeImpl(2, 2);
         assertThat(first.toString()).isEqualTo(LocalTime.MIN.plus(
-                java.time.Duration.ofMinutes( first.asMinutes() )
+                java.time.Duration.ofMinutes(first.asMinutes())
         ).toString());
 
 
        /* return LocalTime.MIN.plus(
                 java.time.Duration.ofMinutes( first.asMinutes() )
         ).toString();*/
+    }
+
+    @Test
+    void isBefore() {
+        var before = new SimpleTimeImpl(1, 2);
+        var after = new SimpleTimeImpl(2, 1);
+        assertThat(before.isBefore(after)).isTrue();
+    }
+
+    @ParameterizedTest
+    @CsvSource({"1, 2, 2, 1", "1, 1, 1, 1"})
+    void isBeforeOrEqual(int firstHours, int firstMinutes, int lastHours, int lastMinutes) {
+        var before = new SimpleTimeImpl(firstHours, firstMinutes);
+        var after = new SimpleTimeImpl(lastHours, lastMinutes);
+        assertThat(before.isBeforeOrEqual(after)).isTrue();
     }
 }

@@ -53,10 +53,16 @@ public class SimpleTimeImpl implements Time {
 
         int otherTotalMins = o.getHours() * 60 + o.getMinutes();
 
-        if (this.totalTimeInMins > otherTotalMins) {
+      /*  if (this.totalTimeInMins > otherTotalMins) {
             return -1;
         } else if (this.totalTimeInMins < otherTotalMins) {
             return 1;
+        }
+        return 0;*/
+        if (this.totalTimeInMins > otherTotalMins) {
+            return 1;
+        } else if (this.totalTimeInMins < otherTotalMins) {
+            return -1;
         }
         return 0;
     }
@@ -88,5 +94,15 @@ public class SimpleTimeImpl implements Time {
                 java.time.Duration.ofMinutes( totalTimeInMins )
         ).toString();
       //  return this.getHours() + ":" + this.getMinutes();
+    }
+
+    @Override
+    public boolean isBefore(Time other) {
+        return Time.super.isBefore(other);
+    }
+
+    @Override
+    public boolean isBeforeOrEqual(Time other) {
+        return Time.super.isBeforeOrEqual(other);
     }
 }
