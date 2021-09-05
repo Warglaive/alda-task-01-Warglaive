@@ -22,7 +22,6 @@ public class SimpleDurationImpl implements Duration {
         return new SimpleDurationImpl(duration.getHours() + this.getHours(), duration.getMinutes() + this.getMinutes());
     }
 
-
     @Override
     public int getHours() {
         return this.totalTimeInMins / 60;
