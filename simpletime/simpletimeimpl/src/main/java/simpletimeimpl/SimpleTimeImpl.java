@@ -22,7 +22,7 @@ public class SimpleTimeImpl implements Time {
             if (hours < 23) {
                 hours++;
             } else {
-               // hours = 0;
+                hours = 0;
             }
         }
 
