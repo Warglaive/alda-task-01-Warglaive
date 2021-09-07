@@ -8,9 +8,6 @@ import java.util.Objects;
 
 public class SimpleTimeImpl implements Time {
     final private int totalTimeInMins;
-   /* private int hours;
-    private int minutes;*/
-
 
     public SimpleTimeImpl(int hours, int minutes) {
         if (hours > 23) {
@@ -19,7 +16,7 @@ public class SimpleTimeImpl implements Time {
                 minutes = 0;
                 hours++;
             }
-            //  throw new IllegalArgumentException("Hours can NOT be > " + hours);
+          //  throw new IllegalArgumentException("Hours can NOT be > " + hours);
         }
 
         //
@@ -32,6 +29,7 @@ public class SimpleTimeImpl implements Time {
         }
 
         this.totalTimeInMins = tempTotalMins;
+
     }
 
     @Override
