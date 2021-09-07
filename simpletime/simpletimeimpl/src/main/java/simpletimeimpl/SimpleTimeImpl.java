@@ -16,16 +16,7 @@ public class SimpleTimeImpl implements Time {
                 minutes = 0;
                 hours++;
             }
-        }
-        if (minutes > 59) {
-            while (minutes > 0) {
-                minutes = 60 - minutes;
-            }
-            if (hours < 23) {
-                hours++;
-            } else {
-                hours = 0;
-            }
+            //  throw new IllegalArgumentException("Hours can NOT be > " + hours);
         }
 
         //
@@ -34,7 +25,7 @@ public class SimpleTimeImpl implements Time {
             throw new IllegalArgumentException("Total minutes can NOT be lower than " + minutes + " " + hours);
         }
         if (tempTotalMins >= (24 * 60)) {
-            throw new IllegalArgumentException("Total minutes can NOT be bigger than" + minutes + " " + hours);
+            throw new IllegalArgumentException("Total minutes can NOT be bigger than " + minutes + " " + hours);
         }
 
         this.totalTimeInMins = tempTotalMins;
