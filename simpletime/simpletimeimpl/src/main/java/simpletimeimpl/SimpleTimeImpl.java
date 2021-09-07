@@ -29,7 +29,6 @@ public class SimpleTimeImpl implements Time {
         } else {
             System.out.println("ELSE REACHED");
         }
-
         this.totalTimeInMins = tempTotalMins;
 
     }
