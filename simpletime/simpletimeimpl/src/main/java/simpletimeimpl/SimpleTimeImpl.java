@@ -11,7 +11,7 @@ public class SimpleTimeImpl implements Time {
 
     public SimpleTimeImpl(int hours, int minutes) {
         if (hours > 23) {
-            throw new IllegalArgumentException("Hours can NOT be > 23");
+            throw new IllegalArgumentException("Hours can NOT be > " + hours);
         }
 
         /* if (minutes > 59) {
@@ -20,7 +20,7 @@ public class SimpleTimeImpl implements Time {
         //
         int tempTotalMins = (hours * 60) + minutes;
         if (tempTotalMins < 0) {
-            throw new IllegalArgumentException("Total minutes can NOT be lower than 0");
+            throw new IllegalArgumentException("Total minutes can NOT be lower than "+minutes);
         }
         if (tempTotalMins >= (24 * 60)) {
             throw new IllegalArgumentException("Total minutes can NOT be bigger than 24 * 60");

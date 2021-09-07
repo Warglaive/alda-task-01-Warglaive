@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11243aa0-4347-4a9f-9957-921a64185c73" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpletimeapi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/simpletimeapi/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simpletimeimpl/src/main/java/simpletimeimpl/SimpleTimeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/simpletimeimpl/src/main/java/simpletimeimpl/SimpleTimeImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +51,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.3908046" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RecentsManager">
@@ -58,6 +60,14 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.All in simpletimeimpl">
+    <configuration name="All in simpletime" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simpletime" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in simpletimeimpl" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simpletimeimpl" />
       <option name="PACKAGE_NAME" value="" />
@@ -98,22 +108,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleTimeImplTest.isBeforeOrEqual" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="simpletimeimpl" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="simpletimeimpl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="simpletimeimpl" />
-      <option name="MAIN_CLASS_NAME" value="simpletimeimpl.SimpleTimeImplTest" />
-      <option name="METHOD_NAME" value="isBeforeOrEqual(int,int,int,int)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SimpleTimeImplTest.untilTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simpletimeimpl" />
       <extension name="coverage">
@@ -133,10 +127,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in simpletimeimpl" />
+        <item itemvalue="JUnit.All in simpletime" />
         <item itemvalue="JUnit.SimpleTimeImplTest.addTimeTest" />
         <item itemvalue="JUnit.SimpleTimeImplTest.untilTest2" />
         <item itemvalue="JUnit.SimpleDurationImplTest.betweenTimes" />
-        <item itemvalue="JUnit.SimpleTimeImplTest.isBeforeOrEqual" />
       </list>
     </recent_temporary>
   </component>
@@ -196,7 +190,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/simpletime$All_in_simpletimeimpl.ic" NAME="All in simpletimeimpl Coverage Results" MODIFIED="1630857961659" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/simpletime$All_in_simpletimeimpl.ic" NAME="All in simpletimeimpl Coverage Results" MODIFIED="1630858198080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/simpletime$SimpleDurationImplTest_plus.ic" NAME="SimpleDurationImplTest.plus Coverage Results" MODIFIED="1630765910719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>simpletimeimpl.*</FILTER>
     </SUITE>
