@@ -40,10 +40,10 @@ public class APFactory implements AbstractAPFactory {
         //TODO
         int totalTimeInMins = (hours * 60) + minutes;
         if (totalTimeInMins < 0) {
-            throw new IllegalArgumentException("Total minutes can NOT be lower than 0");
+            throw new IllegalArgumentException("APFactory: Total minutes can NOT be lower than 0");
         }
-        if (totalTimeInMins >= (24 * 60)) {
-            throw new IllegalArgumentException("Total minutes can NOT be bigger than 24 * 60");
+        if (totalTimeInMins > (24 * 60)) {
+            throw new IllegalArgumentException("APFactory: Total minutes can NOT be bigger than 24 * 60");
         }
         return new SimpleTimeImpl(hours, minutes);
     }
