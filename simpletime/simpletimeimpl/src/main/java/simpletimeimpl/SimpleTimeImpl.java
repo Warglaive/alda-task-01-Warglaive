@@ -11,8 +11,8 @@ public class SimpleTimeImpl implements Time {
 
     public SimpleTimeImpl(int hours, int minutes) {
         if (hours == 23 && minutes > 59) {
-            minutes= Math.abs(60 - minutes);
-            hours=0;
+            minutes = Math.abs(60 - minutes);
+            hours = 0;
         }
         //
         if (hours > 23) {
