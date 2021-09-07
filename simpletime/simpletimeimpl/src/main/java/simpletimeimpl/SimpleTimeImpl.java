@@ -15,20 +15,41 @@ public class SimpleTimeImpl implements Time {
     public SimpleTimeImpl(int hours, int minutes) {
         int tempTotalMinutes = (hours * 60) + minutes;
 
-        
-
-
 
         if (tempTotalMinutes < 0) {
+            if (minutes > 59) {
+                //minutes = 0;
+                if (hours < 23) {
+                    hours++;
+                }
+                if (hours > 23) {
+                    hours = 0;
+                    //minutes = 59;
+                    throw new IllegalArgumentException("Hours can NOT be > " + hours + " " + minutes);
+                }
+                //  throw new IllegalArgumentException("Hours can NOT be > " + hours);
+            }
             throw new IllegalArgumentException("Total minutes can NOT be lower than " + hours + " " + minutes);
         }
         if (tempTotalMinutes > 1439) {
+            if (minutes > 59) {
+                //minutes = 0;
+                if (hours < 23) {
+                    hours++;
+                }
+                if (hours > 23) {
+                    hours = 0;
+                    //minutes = 59;
+                    throw new IllegalArgumentException("Hours can NOT be > " + hours + " " + minutes);
+                }
+                //  throw new IllegalArgumentException("Hours can NOT be > " + hours);
+            }
             throw new IllegalArgumentException("Total minutes can NOT be bigger than " + hours + " " + minutes);
         } else {
             this.totalTimeInMins = tempTotalMinutes;
         }
 
-        if (minutes > 59) {
+     /*   if (minutes > 59) {
             //minutes = 0;
             if (hours < 23) {
                 hours++;
@@ -39,9 +60,7 @@ public class SimpleTimeImpl implements Time {
                 throw new IllegalArgumentException("Hours can NOT be > " + hours + " " + minutes);
             }
             //  throw new IllegalArgumentException("Hours can NOT be > " + hours);
-        }
-
-
+        }*/
     }
 
     @Override
