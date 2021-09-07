@@ -22,10 +22,10 @@ public class SimpleTimeImpl implements Time {
         //
         int tempTotalMins = (hours * 60) + minutes;
         if (tempTotalMins < 0) {
-            throw new IllegalArgumentException("Total minutes can NOT be lower than " + minutes + " " + hours);
+            throw new IllegalArgumentException("Total minutes can NOT be lower than " + hours + " Minutes: " + minutes + "Total: "+tempTotalMins);
         }
         if (tempTotalMins >= (24 * 60)) {
-            throw new IllegalArgumentException("Total minutes can NOT be bigger than " + minutes + " " + hours);
+            throw new IllegalArgumentException("Total minutes can NOT be bigger than Hour: " + hours + " Minutes: " + minutes + "Total: "+tempTotalMins);
         }
 
         this.totalTimeInMins = tempTotalMins;
