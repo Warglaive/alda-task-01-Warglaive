@@ -19,6 +19,11 @@ public class SimpleTimeImpl implements Time {
         }
         if (minutes > 59) {
             minutes = 0;
+            if (hours < 23) {
+                hours++;
+            } else {
+               // hours = 0;
+            }
         }
 
         //
