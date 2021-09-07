@@ -29,7 +29,7 @@ public class SimpleTimeImpl implements Time {
             //minutes = 0;
             hours++;
             if (hours > 23) {
-                //hours = 0;
+                hours = 0;
                 //minutes = 59;
                 throw new IllegalArgumentException("Hours can NOT be > " + hours + " " + minutes);
             }
