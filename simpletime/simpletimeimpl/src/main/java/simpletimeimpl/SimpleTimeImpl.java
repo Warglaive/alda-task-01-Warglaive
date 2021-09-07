@@ -10,9 +10,9 @@ public class SimpleTimeImpl implements Time {
     final private int totalTimeInMins;
 
     public SimpleTimeImpl(int hours, int minutes) {
-        if (hours >= 23) {
+        if (hours > 23) {
             hours = 0;
-            if (minutes >= 59) {
+            if (minutes > 59) {
                 minutes = 0;
                 hours++;
             }
