@@ -8,20 +8,23 @@ import java.util.Objects;
 
 public class SimpleTimeImpl implements Time {
     final private int totalTimeInMins;
+   /* private int hours;
+    private int minutes;*/
+
 
     public SimpleTimeImpl(int hours, int minutes) {
         int tempTotalMins = (hours * 60) + minutes;
         if (tempTotalMins < 0) {
-            throw new IllegalArgumentException("Total minutes can NOT be lower than " + minutes);
+            throw new IllegalArgumentException("Total minutes can NOT be lower than ");
         }
         if (tempTotalMins > 1439) {
-            throw new IllegalArgumentException("Total minutes can NOT be bigger than 24 * 60 " + hours);
+            throw new IllegalArgumentException("Total minutes can NOT be bigger than 24 * 60 ");
         } else {
             this.totalTimeInMins = tempTotalMins;
         }
         int hoursTaken = getHours();
         int minutesTaken = getMinutes();
-        
+
 
 
 
