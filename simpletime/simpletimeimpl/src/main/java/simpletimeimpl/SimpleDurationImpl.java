@@ -8,12 +8,7 @@ public class SimpleDurationImpl implements Duration {
     private final int totalTimeInMins;
 
     public SimpleDurationImpl(int hours, int minutes) {
-     /*   if (hours > 23) {
-            throw new IllegalArgumentException("Hours can NOT be > 23");
-        }
-        if (minutes > 59) {
-            throw new IllegalArgumentException("Minutes can NOT be > 59");
-        }*/
+
         this.totalTimeInMins = hours * 60 + minutes;
     }
 

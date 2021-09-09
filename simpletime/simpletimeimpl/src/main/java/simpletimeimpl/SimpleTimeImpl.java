@@ -116,15 +116,15 @@ public class SimpleTimeImpl implements Time {
         int firstTotalMins = this.asMinutes();
         int lastTotalMins = until.asMinutes();
         // check which is bigger time in minutes
-        int bigger = 0;
-        int smaller = 0;
-        if (firstTotalMins > lastTotalMins) {
+        int bigger = Math.max(firstTotalMins, lastTotalMins);
+        int smaller = Math.min(firstTotalMins, lastTotalMins);
+       /* if (firstTotalMins > lastTotalMins) {
             bigger = firstTotalMins;
             smaller = lastTotalMins;
         } else {
             bigger = lastTotalMins;
             smaller = firstTotalMins;
-        }
+        }*/
 
         //calculate hours and mins
         int durationAsMins = bigger - smaller;
